@@ -296,7 +296,7 @@ if ($dependency_error) {
 
 # Untaint workgroup if supplied on command line
 if (defined($global_workgroup)) {
-	if ($global_workgroup =~ /^([a-zA-Z0-9\.-_]*)$/) {
+	if ($global_workgroup =~ /(.*)/) {
 		$global_workgroup = $1;
 	} else {
 		print "ERROR: Workgroup \"$global_workgroup\"contains some illegal characters\n";
